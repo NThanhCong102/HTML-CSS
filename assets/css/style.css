@@ -416,12 +416,21 @@ a {
 }
 
 /* ==========feedback========== */
+.feedback {
+  background: #2e2100;
+  margin-top: 135px;
+  padding: 96px 0;
+}
 .feedback .feedback-item {
   display: flex;
   align-items: center;
-  margin-top: 135px;
-  padding: 96px;
-  background: #2e2100;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden;
 }
 
 .feedback .dots {
