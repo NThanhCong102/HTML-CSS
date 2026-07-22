@@ -575,16 +575,17 @@ a {
 
 .blog .blog-list {
   display: flex;
-  gap: 18px;
+  gap: 30px;
   margin-top: 55px;
+  overflow: hidden;
 }
 
-.blog .blog-list .item {
-  flex: 1;
+.blog .item {
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
-  /* width: 33.33%; */
+  width: calc(33.33% - 20px);
+  flex-shrink: 0;
 }
 
 .blog .blog-list .item:hover {
@@ -637,8 +638,29 @@ a {
 
 .blog .item .btn {
   margin-top: 12px;
+  font-size: 1.4rem;
 }
 
 .blog .blog-list .btn:hover {
   background: var(--primary-color);
+}
+
+.blog .dots {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.blog .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+}
+
+.blog .dots .active {
+  background: var(--primary-color);
+  cursor: default;
 }
